@@ -71,12 +71,15 @@ const HeroSection = () => {
     <section
       id="home"
       className="
-        relative
-        min-h-[100svh]
-        overflow-hidden
-        bg-[#17120c]
-        text-white
-      "
+  relative
+  h-[680px]
+  overflow-hidden
+  bg-[#17120c]
+  text-white
+
+  sm:h-[800px]
+  lg:h-[860px]
+"
     >
       {/* =====================================================
           BACKGROUND SLIDES
@@ -381,111 +384,7 @@ const HeroSection = () => {
           {/* =================================================
               TRUST POINTS
           ================================================= */}
-          <div
-            className="
-              mt-9
-              grid
-              grid-cols-2
-              gap-x-6
-              gap-y-6
-              border-t
-              border-white/15
-              pt-6
 
-              sm:mt-12
-              sm:flex
-              sm:flex-wrap
-              sm:gap-8
-              sm:pt-7
-            "
-          >
-            {/* Natural */}
-            <div>
-              <p
-                className="
-                  text-xl
-                  font-bold
-
-                  sm:text-2xl
-                "
-              >
-                100%
-              </p>
-
-              <p
-                className="
-                  mt-1
-                  text-[10px]
-                  uppercase
-                  tracking-[0.12em]
-                  text-white/50
-
-                  sm:text-xs
-                  sm:tracking-wider
-                "
-              >
-                Natural
-              </p>
-            </div>
-
-            {/* Premium */}
-            <div>
-              <p
-                className="
-                  text-xl
-                  font-bold
-
-                  sm:text-2xl
-                "
-              >
-                25+
-              </p>
-
-              <p
-                className="
-                  mt-1
-                  text-[10px]
-                  uppercase
-                  tracking-[0.12em]
-                  text-white/50
-
-                  sm:text-xs
-                  sm:tracking-wider
-                "
-              >
-                Premium Spices
-              </p>
-            </div>
-
-            {/* Since */}
-            <div className="col-span-2 sm:col-span-1">
-              <p
-                className="
-                  text-xl
-                  font-bold
-
-                  sm:text-2xl
-                "
-              >
-                Since 1998
-              </p>
-
-              <p
-                className="
-                  mt-1
-                  text-[10px]
-                  uppercase
-                  tracking-[0.12em]
-                  text-white/50
-
-                  sm:text-xs
-                  sm:tracking-wider
-                "
-              >
-                Trusted Quality
-              </p>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -586,10 +485,9 @@ const HeroSection = () => {
               rounded-full
               transition-all
               duration-500
-              ${
-                index === currentSlide
-                  ? "w-8 bg-amber-400 sm:w-10"
-                  : "w-2 bg-white/40 hover:bg-white/70"
+              ${index === currentSlide
+                ? "w-8 bg-amber-400 sm:w-10"
+                : "w-2 bg-white/40 hover:bg-white/70"
               }
             `}
           />
