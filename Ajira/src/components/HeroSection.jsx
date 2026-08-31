@@ -72,7 +72,7 @@ const HeroSection = () => {
       id="home"
       className="
   relative
-  h-[680px]
+  h-[580px]
   overflow-hidden
   bg-[#17120c]
   text-white
