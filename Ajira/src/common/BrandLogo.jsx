@@ -1,4 +1,4 @@
-import logo from "../assets/image/logo-05.png";
+import logo from "../assets/image/Logo-05.png";
 
 function BrandLogo({ inverse = false, compact = false }) {
   return (
