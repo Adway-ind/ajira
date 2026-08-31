@@ -115,16 +115,17 @@ function Footer() {
                   icon={<LocationIcon />}
                   external
                 >
-                  Ajira Export House, Kochi
+                  Ajira Naturals PVT. NO.116.Chennipali
+                  Road. M,H.
                   <br />
-                  Infopark Road, Kerala 682030
+                  Katturnuttupalaiyarn Medakurithy Block. Erode, Tamil Nadu-638101
                 </ContactItem>
 
-                <ContactItem
-                  href="tel:+914842900000"
-                  icon={<PhoneIcon />}
-                >
-                  +91 484 290 0000
+                <ContactItem icon={<PhoneIcon />}>
+                  <div className="flex flex-wrap gap-x-6 gap-y-1">
+                    <span>+91 8946003502</span>
+                    <span>+91 8056791909</span>
+                  </div>
                 </ContactItem>
 
                 <ContactItem

@@ -174,25 +174,27 @@ const HeroSection = () => {
           viewport on small screens.
       ===================================================== */}
       <div
+
         className="
-          relative
-          z-10
-          mx-auto
-          flex
-          min-h-[100svh]
-          w-full
-          max-w-7xl
-          items-start
-          px-5
-          pt-28
-          pb-32
-          sm:px-6
-          sm:pt-32
-          sm:pb-36
-          lg:items-center
-          lg:px-10
-          lg:py-24
-        "
+    relative
+    z-10
+    mx-auto
+    flex
+    min-h-[90svh]
+    w-full
+    max-w-7xl
+    items-start
+    px-5
+    pt-28
+    pb-32
+    sm:px-6
+    sm:pt-32
+    sm:pb-36
+    lg:place-items-center
+    lg:px-10
+    lg:py-24
+  "
+
       >
         <div
           className="
