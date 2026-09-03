@@ -1,4 +1,4 @@
-import logo from "../assets/image/logo/Ajira_Logo.png";
+import logo from "../assets/image/logo/Ajira_logo.png";
 
 function BrandLogo({ inverse = false, compact = false }) {
   return (
