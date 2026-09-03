@@ -40,6 +40,37 @@
   }
 }
 
+@keyframes loaderLogo {
+  0%,
+  100% {
+    opacity: 0.7;
+    transform: scale(0.96);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes loaderProgress {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(200%);
+  }
+}
+
+.animate-loader-logo {
+  animation: loaderLogo 1.2s ease-in-out infinite;
+}
+
+.animate-loader-progress {
+  animation: loaderProgress 0.9s ease-in-out infinite;
+}
+
 @keyframes cardamomFloat {
   0%,
   100% {
