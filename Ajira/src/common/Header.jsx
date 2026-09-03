@@ -3,10 +3,10 @@ import { X, ArrowRight } from "lucide-react";
 import BrandLogo from "./BrandLogo";
 
 const links = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Products", href: "#products" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Products", href: "/products" },
+  { label: "Contact", href: "/contact" },
 ];
 
 function Header() {
@@ -76,11 +76,11 @@ function Header() {
             py-2.5
             text-sm
             font-semibold
-            text-green-700
+            text-black
             no-underline
             transition-colors
             duration-300
-            hover:text-[#C58A18]
+            hover:text-[#18c583]
           "
                 >
                   <span className="relative z-10">
@@ -98,7 +98,7 @@ function Header() {
               w-0
               -translate-x-1/2
               rounded-full
-              bg-[#C58A18]
+              bg-[#18c583]
               transition-all
               duration-500
               ease-out
@@ -112,7 +112,7 @@ function Header() {
 
           {/* Quote */}
           <a
-            href="#quote"
+            href="/contact"
             className="
       group
       ml-auto
@@ -121,7 +121,7 @@ function Header() {
       justify-center
       gap-2
       rounded-xl
-      bg-[#C58A18]
+      bg-[#18c560]
       px-5
       py-3
       text-sm
@@ -133,7 +133,7 @@ function Header() {
       transition
       duration-300
       hover:-translate-y-0.5
-      hover:bg-[#D99B20]
+      hover:bg-[#20d97c]
     "
           >
             Get a Quote
