@@ -45,35 +45,43 @@ function Header() {
         </a>
 
         {/* Desktop Navigation */}
+        {/* Desktop Navigation */}
         <div className="hidden md:flex md:items-center">
 
-          {/* Links */}
-          <ul className="
-            m-0
-            flex
-            list-none
-            items-center
-            gap-10
-            p-0
-          ">
+          {/* Centered Links */}
+          <ul
+            className="
+      absolute
+      left-1/2
+      top-1/2
+      m-0
+      flex
+      -translate-x-1/2
+      -translate-y-1/2
+      list-none
+      items-center
+      gap-10
+      p-0
+    "
+          >
             {links.map((link) => (
               <li key={link.label}>
                 <a
                   href={link.href}
                   className="
-                    group/link
-                    relative
-                    block
-                    px-2
-                    py-2.5
-                    text-sm
-                    font-semibold
-                    text-green-700
-                    no-underline
-                    transition-colors
-                    duration-300
-                    hover:text-[#C58A18]
-                  "
+            group/link
+            relative
+            block
+            px-7
+            py-2.5
+            text-sm
+            font-semibold
+            text-green-700
+            no-underline
+            transition-colors
+            duration-300
+            hover:text-[#C58A18]
+          "
                 >
                   <span className="relative z-10">
                     {link.label}
@@ -83,19 +91,19 @@ function Header() {
                   <span
                     aria-hidden="true"
                     className="
-                      absolute
-                      bottom-1
-                      left-1/2
-                      h-[2px]
-                      w-0
-                      -translate-x-1/2
-                      rounded-full
-                      bg-[#C58A18]
-                      transition-all
-                      duration-500
-                      ease-out
-                      group-hover/link:w-[70%]
-                    "
+              absolute
+              bottom-1
+              left-1/2
+              h-[2px]
+              w-0
+              -translate-x-1/2
+              rounded-full
+              bg-[#C58A18]
+              transition-all
+              duration-500
+              ease-out
+              group-hover/link:w-[70%]
+            "
                   />
                 </a>
               </li>
@@ -106,27 +114,27 @@ function Header() {
           <a
             href="#quote"
             className="
-              group
-              ml-8
-              inline-flex
-              items-center
-              justify-center
-              gap-2
-              rounded-xl
-              bg-[#C58A18]
-              px-5
-              py-3
-              text-sm
-              font-bold
-              text-white
-              no-underline
-              shadow-lg
-              shadow-[#C58A18]/25
-              transition
-              duration-300
-              hover:-translate-y-0.5
-              hover:bg-[#D99B20]
-            "
+      group
+      ml-auto
+      inline-flex
+      items-center
+      justify-center
+      gap-2
+      rounded-xl
+      bg-[#C58A18]
+      px-5
+      py-3
+      text-sm
+      font-bold
+      text-white
+      no-underline
+      shadow-lg
+      shadow-[#C58A18]/25
+      transition
+      duration-300
+      hover:-translate-y-0.5
+      hover:bg-[#D99B20]
+    "
           >
             Get a Quote
 
@@ -186,10 +194,9 @@ function Header() {
           transition-opacity
           duration-300
           md:hidden
-          ${
-            menuOpen
-              ? "pointer-events-auto opacity-100"
-              : "pointer-events-none opacity-0"
+          ${menuOpen
+            ? "pointer-events-auto opacity-100"
+            : "pointer-events-none opacity-0"
           }
         `}
       />
@@ -218,10 +225,9 @@ function Header() {
           duration-500
           ease-[cubic-bezier(0.22,1,0.36,1)]
           md:hidden
-          ${
-            menuOpen
-              ? "translate-x-0"
-              : "translate-x-full"
+          ${menuOpen
+            ? "translate-x-0"
+            : "translate-x-full"
           }
         `}
       >

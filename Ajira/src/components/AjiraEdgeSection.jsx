@@ -6,6 +6,12 @@ import {
   Gauge,
   Lightbulb,
 } from "lucide-react";
+import LetterRed from "../assets/image/pattern/01_I_red.svg";
+import LetterGreen from "../assets/image/pattern/02_J_green.svg";
+import LetterYellow from "../assets/image/pattern/03_i_yellow.svg";
+import LetterPink from "../assets/image/pattern/04_R_pink.svg";
+import LetterBrown from "../assets/image/pattern/05_I_brown.svg";
+import LetterOrange from "../assets/image/pattern/06_I_orange.svg";
 
 const features = [
   {
@@ -46,10 +52,35 @@ const features = [
   },
 ];
 
+const letterPattern = [
+  { src: LetterGreen, className: "-left-3 top-10 w-5 sm:left-7", rotation: "-16deg", delay: "0s", duration: "6s" },
+  { src: LetterYellow, className: "right-5 top-16 w-3 sm:right-10", rotation: "12deg", delay: "1.4s", duration: "5.5s" },
+  { src: LetterRed, className: "left-[5%] bottom-2 w-3", rotation: "20deg", delay: "0.7s", duration: "6.5s" },
+  { src: LetterPink, className: "-right-8 bottom-4 w-5 sm:right-5", rotation: "-12deg", delay: "2s", duration: "7s" },
+  { src: LetterBrown, className: "left-[13%] bottom-[40%] hidden w-2 lg:block", rotation: "100deg", delay: "1s", duration: "5.8s" },
+  { src: LetterOrange, className: "right-[13%] top-[55%] hidden w-2 lg:block", rotation: "-100deg", delay: "2.5s", duration: "6.2s" },
+];
+
 export default function AjiraEdge() {
   return (
-    <section className="w-full bg-white px-6 py-16 sm:px-8 lg:px-12 lg:py-20">
-      <div className="mx-auto max-w-[1120px]">
+    <section className="relative w-full overflow-hidden bg-white px-6 py-16 sm:px-8 lg:px-12 lg:py-20">
+      <div className="pointer-events-none absolute inset-0 z-0" aria-hidden="true">
+        {letterPattern.map((letter, index) => (
+          <img
+            key={index}
+            src={letter.src}
+            alt=""
+            className={`ajira-letter-float absolute ${letter.className}`}
+            style={{
+              "--letter-rotation": letter.rotation,
+              animationDelay: letter.delay,
+              animationDuration: letter.duration,
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="relative z-10 mx-auto max-w-[1120px]">
 
         {/* Heading */}
         <div className="mb-14 text-center">

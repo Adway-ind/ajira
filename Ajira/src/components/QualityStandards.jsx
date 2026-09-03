@@ -5,6 +5,7 @@ import {
   CircleCheck,
 } from "lucide-react";
 
+
 const standards = [
   {
     title: "Organic Sourcing",
@@ -39,10 +40,14 @@ const standards = [
   },
 ];
 
+
+
 export default function QualityStandards() {
   return (
-    <section className="w-full bg-[#043d28] px-6 py-12 sm:px-8 md:py-14 lg:px-12 lg:py-10">
-      <div className="mx-auto max-w-[1120px]">
+    <section className="relative w-full overflow-hidden bg-[#043d28] px-6 py-12 sm:px-8 md:py-14 lg:px-12 lg:py-10">
+      
+
+      <div className="relative z-10 mx-auto max-w-[1120px]">
 
         {/* Heading */}
         <div className="text-center">

@@ -69,3 +69,56 @@
 .animate-cardamom-float-slow {
   animation: cardamomFloatSlow 5s ease-in-out infinite;
 }
+
+.floating-item {
+  position: absolute;
+  display: block;
+  border-radius: 999px;
+  opacity: 0.9;
+  animation: floatingMotion 5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.floating-dash {
+  border-radius: 999px;
+}
+
+.floating-hook {
+  width: 55px;
+  height: 55px;
+  background: transparent !important;
+  border: 15px solid currentColor;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-radius: 50%;
+}
+
+@keyframes floatingMotion {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -14px;
+  }
+}
+
+.ajira-letter-float {
+  opacity: 0.28;
+  animation-name: ajiraLetterFloat;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+@keyframes ajiraLetterFloat {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(var(--letter-rotation));
+  }
+
+  50% {
+    transform: translate3d(0, -14px, 0) rotate(var(--letter-rotation));
+  }
+}

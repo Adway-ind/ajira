@@ -1,4 +1,4 @@
-import logo from "../assets/image/Logo-05.png";
+import logo from "../assets/image/logo/Ajira_Logo.png";
 
 function BrandLogo({ inverse = false, compact = false }) {
   return (
@@ -6,13 +6,15 @@ function BrandLogo({ inverse = false, compact = false }) {
       className="inline-flex items-center"
       aria-label="Ajira Naturals Private Limited"
     >
-      <img
-        src={logo}
-        alt="Ajira Naturals Private Limited"
-        className={`object-contain ${
-          compact ? "h-10 w-auto" : "h-14 w-auto"
-        }`}
-      />
+      <a href="/">
+        <img
+          src={logo}
+          alt="Ajira Naturals Private Limited"
+          className={`object-contain ${
+            compact ? "h-14 w-auto" : "h-14 w-auto"
+          }`}
+        />
+      </a>
     </div>
   );
 }

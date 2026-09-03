@@ -5,12 +5,40 @@ import {
     MapPin,
 } from "lucide-react";
 import WB from "../assets/image/bg/img-6.png"
-import Cardamom from "../assets/image/float/img-1.png";
+import LetterRed from "../assets/image/pattern/01_I_red.svg";
+import LetterGreen from "../assets/image/pattern/02_J_green.svg";
+import LetterYellow from "../assets/image/pattern/03_i_yellow.svg";
+import LetterPink from "../assets/image/pattern/04_R_pink.svg";
+import LetterOrange from "../assets/image/pattern/06_I_orange.svg";
+
+const letterPattern = [
+    { src: LetterGreen, className: "-left-3 top-10 w-5 sm:left-3", rotation: "-14deg", delay: "0s", duration: "6s" },
+    { src: LetterYellow, className: "right-5 top-10 w-3 sm:right-10", rotation: "14deg", delay: "1.3s", duration: "5.5s" },
+    { src: LetterRed, className: "left-[7%] bottom-6 w-3", rotation: "18deg", delay: "0.8s", duration: "6.5s" },
+    { src: LetterPink, className: "-right-8 bottom-7 w-6 sm:right-4", rotation: "-10deg", delay: "2.1s", duration: "7s" },
+    { src: LetterOrange, className: "left-[48%] top-5 hidden w-2 lg:block", rotation: "-8deg", delay: "2.6s", duration: "6.2s" },
+];
 
 export default function AboutSection() {
     return (
-        <section className="w-full bg-white px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
-            <div className="mx-auto max-w-[1120px]">
+        <section className="relative w-full overflow-hidden bg-white px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+            <div className="pointer-events-none absolute inset-0 z-0" aria-hidden="true">
+                {letterPattern.map((letter, index) => (
+                    <img
+                        key={index}
+                        src={letter.src}
+                        alt=""
+                        className={`ajira-letter-float absolute ${letter.className}`}
+                        style={{
+                            "--letter-rotation": letter.rotation,
+                            animationDelay: letter.delay,
+                            animationDuration: letter.duration,
+                        }}
+                    />
+                ))}
+            </div>
+
+            <div className="relative z-10 mx-auto max-w-[1120px]">
 
                 <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
 
@@ -28,6 +56,7 @@ export default function AboutSection() {
                                 Supplying the World.
                             </span>
                         </h2>
+
 
                         <div className="mt-5 h-[2px] w-12 bg-[#d8a719]" />
 
@@ -54,7 +83,6 @@ export default function AboutSection() {
                             , ensuring the right grades, specifications, processing, and
                             quality standards for every order.
                         </p>
-
                         {/* CTA */}
                         <a
                             href="/about"
@@ -75,58 +103,12 @@ export default function AboutSection() {
                     <div className="relative">
 
                         {/* Floating Cardamom - Top Right */}
-                        <img
-                            src={Cardamom}
-                            alt=""
-                            aria-hidden="true"
-                            className="
-      pointer-events-none
-      absolute
-      -right-10
-      -top-12
-      z-20
-      w-[95px]
-      rotate-[25deg]
-      drop-shadow-[0_12px_12px_rgba(0,0,0,0.18)]
-      animate-cardamom-float
-    "
-                        />
+                        
 
                         {/* Floating Cardamom - Left */}
-                        <img
-                            src={Cardamom}
-                            alt=""
-                            aria-hidden="true"
-                            className="
-      pointer-events-none
-      absolute
-      -left-12
-      top-[38%]
-      z-20
-      w-[70px]
-      rotate-[-35deg]
-      drop-shadow-[0_10px_10px_rgba(0,0,0,0.15)]
-      animate-cardamom-float-slow
-    "
-                        />
+                        
 
-                        {/* Floating Cardamom - Bottom Right */}
-                        <img
-                            src={Cardamom}
-                            alt=""
-                            aria-hidden="true"
-                            className="
-      pointer-events-none
-      absolute
-      -bottom-10
-      right-[12%]
-      z-20
-      w-[75px]
-      rotate-[65deg]
-      drop-shadow-[0_10px_10px_rgba(0,0,0,0.16)]
-      animate-cardamom-float
-    "
-                        />
+                        
 
                         {/* Main Image */}
                         <div className="relative overflow-hidden rounded-[18px]">

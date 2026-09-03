@@ -1,4 +1,4 @@
-import BrandLogo from "./BrandLogo";
+import Logo from "../assets/image/logo/Logo-05.png";
 
 import {
   FaInstagram,
@@ -43,9 +43,13 @@ function Footer() {
             <div>
               <a
                 className="inline-flex no-underline"
-                href="#home"
+                href="/"
               >
-                <BrandLogo inverse />
+                <img
+                  src={Logo}
+                  alt="Logo"
+                  className="h-14 w-auto object-contain"
+                />
               </a>
 
               <p className="mt-5 max-w-[290px] text-sm leading-6 text-slate-400">
@@ -82,12 +86,7 @@ function Footer() {
                   <FaWhatsapp size={17} />
                 </SocialLink>
 
-                <SocialLink
-                  href="mailto:export@ajiranaturals.com"
-                  label="Email"
-                >
-                  <MailIcon />
-                </SocialLink>
+                
               </div>
             </div>
 
@@ -118,7 +117,7 @@ function Footer() {
                   Ajira Naturals PVT. NO.116.Chennipali
                   Road. M,H.
                   <br />
-                  Katturnuttupalaiyarn Medakurithy Block. Erode, Tamil Nadu-638101
+                  Katturnuttupalaiyarn Medakurithy Block. Erode,<br />Tamil Nadu-638101
                 </ContactItem>
 
                 <ContactItem icon={<PhoneIcon />}>

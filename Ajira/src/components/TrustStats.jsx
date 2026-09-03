@@ -30,7 +30,7 @@ const stats = [
 
 export default function StatsSection() {
   return (
-    <section className="w-full bg-[#f3f6ed] py-14 mt-16 md:py-16">
+    <section className="w-full bg-[#f3f6ed] py-14 mt-0 md:py-16">
       <div className="mx-auto grid max-w-6xl grid-cols-2 gap-y-12 md:grid-cols-4 md:gap-y-0">
         {stats.map((stat, index) => {
           const Icon = stat.icon;

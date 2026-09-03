@@ -4,6 +4,11 @@ import { Autoplay } from "swiper/modules";
 import LOGO_1 from "../assets/image/slider/logo-1.png"
 import LOGO_2 from "../assets/image/slider/logo-2.png"
 import LOGO_3 from "../assets/image/slider/logo-3.jpg"
+import LetterRed from "../assets/image/pattern/01_I_red.svg";
+import LetterGreen from "../assets/image/pattern/02_J_green.svg";
+import LetterYellow from "../assets/image/pattern/03_i_yellow.svg";
+import LetterPink from "../assets/image/pattern/04_R_pink.svg";
+import LetterOrange from "../assets/image/pattern/06_I_orange.svg";
 
 import "swiper/css";
 
@@ -34,10 +39,34 @@ const certifications = [
     },
 ];
 
+const letterPattern = [
+    { src: LetterGreen, className: "-left-7 top-10 w-4 sm:left-4", rotation: "-15deg", delay: "0s", duration: "6s" },
+    { src: LetterYellow, className: "right-4 top-10 w-2 sm:right-10", rotation: "12deg", delay: "1.3s", duration: "5.5s" },
+    { src: LetterRed, className: "left-[10%] bottom-6 w-2", rotation: "18deg", delay: "0.8s", duration: "6.4s" },
+    { src: LetterPink, className: "left-[95%] bottom-4 w-5 sm:right-0", rotation: "-10deg", delay: "2s", duration: "7s" },
+    { src: LetterOrange, className: "left-[48%] top-5 hidden w-1 lg:block", rotation: "-100deg", delay: "2.6s", duration: "6.2s" },
+];
+
 export default function GlobalCertifications() {
     return (
         <section className="relative overflow-hidden bg-[#f5f7f0] px-6 py-20 sm:px-8 lg:px-12">
-            <div className="mx-auto max-w-[1120px]">
+            <div className="pointer-events-none absolute inset-0 z-0" aria-hidden="true">
+                {letterPattern.map((letter, index) => (
+                    <img
+                        key={index}
+                        src={letter.src}
+                        alt=""
+                        className={`ajira-letter-float absolute ${letter.className}`}
+                        style={{
+                            "--letter-rotation": letter.rotation,
+                            animationDelay: letter.delay,
+                            animationDuration: letter.duration,
+                        }}
+                    />
+                ))}
+            </div>
+
+            <div className="relative z-10 mx-auto max-w-[1120px]">
 
                 {/* Heading */}
                 <div className="mx-auto max-w-[650px] text-center">
