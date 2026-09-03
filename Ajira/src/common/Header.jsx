@@ -4,9 +4,9 @@ import BrandLogo from "./BrandLogo";
 
 const links = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Products", href: "/products" },
-  { label: "Contact", href: "/contact" },
+  { label: "About", href: "/About" },
+  { label: "Products", href: "/Products" },
+  { label: "Contact", href: "/Contact" },
 ];
 
 function Header() {
