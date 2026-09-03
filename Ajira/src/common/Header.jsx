@@ -369,7 +369,7 @@ function Header() {
             </p>
 
             <a
-              href="#quote"
+              href="/contact"
               onClick={closeMenu}
               className="
                 group
