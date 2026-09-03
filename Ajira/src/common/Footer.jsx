@@ -6,14 +6,20 @@ import {
   FaLinkedinIn,
   FaWhatsapp,
 } from "react-icons/fa";
+import { ArrowUp } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const quickLinks = ["About Us", "Products", "Contact"];
+const quickLinks = [
+  { label: "About Us", href: "/about" },
+  { label: "Products", href: "/products" },
+  { label: "Contact", href: "/contact" },
+];
 
 const supportLinks = [
-  "Privacy Policy",
-  "Terms of Service",
-  "Quality Lab",
-  "Global Logistics",
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms of Service", href: "/terms-of-service" },
+  { label: "Quality Lab", href: "/contact" },
+  { label: "Global Logistics", href: "/contact" },
 ];
 
 function Footer() {
@@ -86,7 +92,7 @@ function Footer() {
                   <FaWhatsapp size={17} />
                 </SocialLink>
 
-                
+
               </div>
             </div>
 
@@ -110,16 +116,24 @@ function Footer() {
 
               <address className="mt-6 space-y-5 not-italic">
                 <ContactItem
-                  href="https://maps.google.com/?q=Kochi+Infopark+Road+Kerala+India"
+                  href="https://www.google.com/maps/search/?api=1&query=Ajira+Naturals+PVT+NO+116+Chennipali+Road+Erode+Tamil+Nadu+638101"
                   icon={<LocationIcon />}
                   external
                 >
-                  Ajira Naturals PVT. NO.116.Chennipali
-                  Road. M,H.
-                  <br />
-                  Katturnuttupalaiyarn Medakurithy Block. Erode,<br />Tamil Nadu-638101
-                </ContactItem>
+                  <div className="max-w-[280px] text-sm leading-6 text-[#687685] sm:max-w-[340px]">
+                    {/* <p className="font-medium text-[#263c54]">
+                      Ajira Naturals Pvt. Ltd.
+                    </p> */}
 
+                    <p className="mt-1">
+                      PVT. NO. 116, Chennipali Road,
+                      <br className="hidden sm:block" />
+                      Katturnuttupalaiyarn, Medakurithy Block,
+                      <br className="hidden sm:block" />
+                      Erode, Tamil Nadu – 638101
+                    </p>
+                  </div>
+                </ContactItem>
                 <ContactItem icon={<PhoneIcon />}>
                   <div className="flex flex-wrap gap-x-6 gap-y-1">
                     <span>+91 8946003502</span>
@@ -139,23 +153,35 @@ function Footer() {
         </div>
 
         {/* Bottom Footer */}
-        <div className="relative mx-7 flex flex-col gap-3 border-t border-white/10 py-6 text-left text-xs text-slate-500 sm:mx-10 sm:flex-row sm:items-center sm:justify-between lg:mx-12">
+        <div className="relative mx-7 flex flex-col gap-4 border-t border-white/10 py-6 text-left text-xs text-slate-500 sm:mx-10 sm:flex-row sm:items-center sm:justify-between lg:mx-12">
 
           <p>
             © {new Date().getFullYear()} Ajira Naturals. All rights reserved.
           </p>
 
-          <p>
-            Powered by{" "}
-            <a
-              href="https://www.witsow.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-emerald-400 transition hover:text-emerald-300"
+          <div className="flex items-center gap-5">
+            <p>
+              Powered by{" "}
+              <a
+                href="https://www.witsow.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-emerald-400 transition hover:text-emerald-300"
+              >
+                WITSOW
+              </a>
+            </p>
+
+            <button
+              type="button"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              aria-label="Scroll to top"
+              title="Scroll to top"
+              className="grid size-9 place-items-center rounded-lg border border-white/10 bg-white/5 text-slate-300 transition-all hover:-translate-y-0.5 hover:border-emerald-400 hover:bg-emerald-400 hover:text-slate-950"
             >
-              WITSOW
-            </a>
-          </p>
+              <ArrowUp size={16} />
+            </button>
+          </div>
 
         </div>
       </div>
@@ -184,45 +210,19 @@ function FooterHeading({ children }) {
 function FooterLinks({ title, links }) {
   return (
     <div>
-      <FooterHeading>
+      <h3 className="text-xs font-black uppercase tracking-[0.18em] text-white">
         {title}
-      </FooterHeading>
+      </h3>
 
-      <ul className="mt-6 space-y-3.5 p-0">
+      <ul className="mt-4 space-y-3">
         {links.map((link) => (
-          <li
-            key={link}
-            className="list-none"
-          >
-            <a
-              className="
-                group
-                inline-flex
-                items-center
-                gap-2
-                text-sm
-                text-slate-400
-                no-underline
-                transition
-                hover:text-emerald-400
-              "
-              href={`#${link
-                .toLowerCase()
-                .replaceAll(" ", "-")}`}
+          <li key={link.href}>
+            <Link
+              to={link.href}
+              className="text-sm text-slate-400 transition-colors hover:text-emerald-400"
             >
-              <span
-                className="
-                  h-px
-                  w-0
-                  bg-emerald-400
-                  transition-all
-                  duration-300
-                  group-hover:w-3
-                "
-              />
-
-              {link}
-            </a>
+              {link.label}
+            </Link>
           </li>
         ))}
       </ul>

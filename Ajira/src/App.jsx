@@ -2,15 +2,18 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Header from "./common/Header";
 import Footer from "./common/Footer";
+import ScrollToTop from "./common/ScrollToTop";
 
 import Home from "./Pages/Home";
 import About from "./Pages/About";
-import Products from "./Pages/Products";
 import Contact from "./Pages/Contact";
+import Products from "./Pages/Products";
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
+
       <Header />
 
       <Routes>
