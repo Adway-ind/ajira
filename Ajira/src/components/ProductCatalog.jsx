@@ -54,7 +54,7 @@ export default function ProductCatalog() {
           </div>
 
           <a
-            href="/catalog"
+            href="/products"
             className="group flex w-fit items-center gap-2 text-[13px] font-medium text-[#00783a] transition-colors hover:text-[#005d2c]"
           >
             View Full Catalog
